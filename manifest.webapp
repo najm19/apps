@@ -1,0 +1,13 @@
+﻿{
+  "name": "Devil's Calls",
+  "description": "Registra llamadas de Bancos, extorsiones, etc, permite buscar un número y ver comentarios de esas llamadas",
+  "launch_path": "ultimo/test2/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Norma Jiménez",
+    "url": "http://normajimenez.me"
+  },
+  "default_locale": "en"
+}

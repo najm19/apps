@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+
+    <title>::: Devil's Calls:::</title>
+    <meta name="description" content="Permite registrar una llamada de dudosa procedencia y verificar si ya existe una denuncia de ese número.">
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+
+    <!-- Place favicon.ico in the root directory -->
+<script language="JavaScript" type="text/javascript" src="js/ajax.js"></script>
+
+	<script src="js/mysqlwslib.js"></script>
+  </head>
+
+<body>
+
+<form name="llamadas" method="post" action="insert.php">
+
+<center><h1>Devil's Calls</h1></center>
+<center>
+¿Recibiste una llamada extraña? <br> ¿No conoces un número y quieres saber si es seguro responder?
+<br>
+<table>
+<tr>
+<td> <input type="text" name="buscar"> </td>
+</tr>
+</table>
+<input type="submit" value="Buscar" onclick="MostrarConsulta('consulta.php'); return false">
+</form>
+<br>
+<br>
+¿Quieres registrar un número poco confiable?
+Si recibiste una llamada extraña, alerta a otros usuarios: 
+<br>
+<br> 
+<table>
+<tr>
+<td> Número: </td> <td> <input type="text" name="numero">&nbsp;<img src="img/Calls-32.png"> </td> 
+</tr>
+<tr>
+<td> Categoría: </td> <td> <select name="categoria"> 
+
+<option>Desconocido</option>
+  <option>Banco</option>
+  <option>Cobranza</option>
+  <option>Extorsion</option>
+  <option>Publicidad</option>
+  <option>Otra</option>
+</select> </td> 
+</tr>
+<tr>  
+<td> Seudónimo: </td> <td> <input type="text" name="seudonimo"> (puedes usar anónimo) </td>
+<tr>  
+<td>
+País: </td> <td> <input type="text" name="pais"> </td>
+</tr>
+<tr>
+<td> Comentarios: </td> <td> <TEXTAREA name="comentario" rows="4" cols="20"></TEXTAREA> </td>
+</tr>
+</table>
+<input type="submit" value="Registrar">
+</form>
+<br><br>
+:Registro de llamadas sospechosas:
+<div id="resultado"></div></body>
+</center>
+</body>
+</html> 
+
